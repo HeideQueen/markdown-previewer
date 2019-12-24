@@ -8,9 +8,14 @@ const Editor = ({ userInput, handleChange }) => (
       name='editor'
       id='editor'
       cols='80'
-      rows='20'
+      rows='30'
       value={userInput}
       onChange={handleChange}
+      style={{
+        padding: '1em',
+        backgroundColor: '#333',
+        color: 'palevioletred'
+      }}
     />
   </div>
 );

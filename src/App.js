@@ -5,7 +5,7 @@ import Preview from './components/preview/preview.component';
 
 import initialState from './App.utils';
 
-import './App.css';
+import { Container, Col } from './App.styles';
 
 const App = () => {
   const [userInput, setUserInput] = useState(initialState);
@@ -15,9 +15,19 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <Editor userInput={userInput} handleChange={handleChange} />
-      <Preview userInput={userInput} />
+    <div>
+      <h1 style={{ textAlign: 'center' }}>Queen's Markdown Previewer</h1>
+      <hr />
+      <Container>
+        <Col>
+          <h2>Write your markdown here:</h2>
+          <Editor userInput={userInput} handleChange={handleChange} />
+        </Col>
+        <Col>
+          <h2>Here the magic happens:</h2>
+          <Preview userInput={userInput} />
+        </Col>
+      </Container>
     </div>
   );
 };

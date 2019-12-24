@@ -2,7 +2,7 @@ import React from 'react';
 
 import marked from 'marked';
 
-import './preview.styles';
+import { PreviewArea } from './preview.styles';
 
 const Preview = ({ userInput }) => {
   const getMarkdown = () => ({
@@ -11,7 +11,7 @@ const Preview = ({ userInput }) => {
 
   return (
     <div id='preview-container'>
-      <div id='preview' dangerouslySetInnerHTML={getMarkdown()} />
+      <PreviewArea id='preview' dangerouslySetInnerHTML={getMarkdown()} />
     </div>
   );
 };

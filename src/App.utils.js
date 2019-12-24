@@ -1,5 +1,7 @@
 const initialState = `
   # Welcome to my markdown previewer
+
+  ---
   
   ## You can write your markdown here and it will show in the preview area
 
